@@ -9,8 +9,8 @@ if (Object.keys(Env).length > 0) {
     api_key: Env.CONTENTSTACK_API_KEY,
     delivery_token: Env.CONTENTSTACK_DELIVERY_TOKEN,
     environment: Env.CONTENTSTACK_ENVIRONMENT,
-    branch: Env.CONTENTSTACK_BRANCH,
-    region: Env.CONTENTSTACK_REGION,
+    branch: process.env.CONTENTSTACK_BRANCH,
+    region: process.env.CONTENTSTACK_REGION,
     live_preview: {
       host: Env.CONTENTSTACK_API_HOST,
       enable: Env.CONTENTSTACK_LIVE_PREVIEW === 'true',
